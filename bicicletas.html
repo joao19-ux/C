@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bicicletas - Concessionária XYZ</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Estilo para o modal */
+        .modal {
+            display: none; /* Inicialmente escondido */
+            position: fixed;
+            z-index: 1; /* Fica acima de outros elementos */
+            left: 0;
+            top: 0;
+            width: 100%; /* Largura cheia */
+            height: 100%; /* Altura cheia */
+            overflow: auto; /* Permite rolagem se necessário */
+            background-color: rgb(0,0,0); /* Fundo preto com opacidade */
+            background-color: rgba(0,0,0,0.4); /* Cor do fundo */
+        }
+
+        /* O conteúdo do modal */
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%; /* Largura do modal */
+            max-width: 600px; /* Largura máxima */
+        }
+
+        /* O botão de fechar (x) */
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        /* Estilo geral das bicicletas */
+        .veiculo {
+            text-align: center;
+            margin: 10px;
+        }
+
+        .veiculo img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #333;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header / Cabeçalho -->
+    <header>
+        <div class="logo">
+            <img src="https://static.vecteezy.com/ti/vetor-gratis/t2/6367949-x-red-black-alphabet-letter-logo-icon-design-with-swoosh-and-star-criative-template-for-business-and-company-vetor.jpg" alt="Logo da Concessionária XYZ">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="home.html">Início</a></li>
+                <li><a href="carros.html">Carros</a></li>
+                <li><a href="motos.html">Motos</a></li>
+                <li><a href="caminhoes.html">Caminhões</a></li>
+                <li><a href="jatos.html">Jatos</a></li>
+                <li><a href="jet-skis.html">Jet Skis</a></li>
+                <li><a href="bicicletas.html">Bicicletas</a></li>
+                <li><a href="financiamento.html">Financiamento</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Seção Bicicletas -->
+    <section id="bicicletas">
+        <h2>Bicicletas</h2>
+        <div class="veiculos">
+            <!-- Bicicleta 1 -->
+            <div class="veiculo">
+                <img src="https://www.ciadopedal.com.br/5922-thickbox_default/bicicleta-26-onine-pro-team-merida.jpg" alt="Bicicleta 1">
+                <h3>Mountain Bike Merida</h3>
+                <p>Preço: R$ 3.499</p>
+                <button onclick="openModal('modal-1')">Mais Informações</button>
+            </div>
+
+            <!-- Bicicleta 2 -->
+            <div class="veiculo">
+                <img src="https://assets.specialized.com/i/specialized/91522-55_ROCKHOPPER-COMP-29-REDWD-SMK_HERO-SQUARE" alt="Bicicleta 2">
+                <h3>Specialized Rockhopper</h3>
+                <p>Preço: R$ 4.199</p>
+                <button onclick="openModal('modal-2')">Mais Informações</button>
+            </div>
+
+            <!-- Bicicleta 3 -->
+            <div class="veiculo">
+                <img src="https://images.tcdn.com.br/img/img_prod/1109176/trek_marlin_7_663_1_aefed53b2a444379eb4a7d7a925942f3.jpg" alt="Bicicleta 3">
+                <h3>Trek Marlin 7</h3>
+                <p>Preço: R$ 3.999</p>
+                <button onclick="openModal('modal-3')">Mais Informações</button>
+            </div>
+
+            <!-- Bicicleta 4 -->
+            <div class="veiculo">
+                <img src="https://caloi.com/wp-content/uploads/2024/04/Carbon-Sport-VRM_Lateral_2000.jpg" alt="Bicicleta 4">
+                <h3>Caloi Elite Carbon</h3>
+                <p>Preço: R$ 8.900</p>
+                <button onclick="openModal('modal-4')">Mais Informações</button>
+            </div>
+
+            <!-- Bicicleta 5 -->
+            <div class="veiculo">
+                <img src="https://www.canyon.com/dw/image/v2/BCML_PRD/on/demandware.static/-/Sites-canyon-master/default/dwd133f3e4/images/full/full_2024_/2023/full_2024_3706_endurace-cf-6_P01_P5.jpg?sw=750&sfrm=png&q=90&bgcolor=F2F2F2" alt="Bicicleta 5">
+                <h3>Canyon Endurace</h3>
+                <p>Preço: R$ 6.500</p>
+                <button onclick="openModal('modal-5')">Mais Informações</button>
+            </div>
+
+            <!-- Bicicleta 6 -->
+            <div class="veiculo">
+                <img src="https://images.tcdn.com.br/img/img_prod/1047844/bicicleta_caloi_10_shimano_14v_preto_dourado_581_1_3d13804c8fdbec89117a6dd8e4a7983f.jpg" alt="Bicicleta 6">
+                <h3>Ouro Preto Speed</h3>
+                <p>Preço: R$ 2.499</p>
+                <button onclick="openModal('modal-6')">Mais Informações</button>
+            </div>
+
+            <!-- Bicicleta 7 -->
+            <div class="veiculo">
+                <img src="https://610f05b8e62ead709b22-8723a4ae1eda88f8e1333559e074a9c8.ssl.cf1.rackcdn.com/PostImagem/51928/specialized-creo-founder-edition-semi-nova-bike-em-floripa_o1h5igooa31l22i9s7v01sk0pste_capa_2.jpg" alt="Bicicleta 7">
+                <h3>Roval CLX</h3>
+                <p>Preço: R$ 5.800</p>
+                <button onclick="openModal('modal-7')">Mais Informações</button>
+            </div>
+
+            <!-- Bicicleta 8 -->
+            <div class="veiculo">
+                <img src="https://asset.scott-sports.com/fit-in/2000x2000/290/290360_1920440_3.png?signature=d2459a146fd4cde1ce7103dc9dadeb74566c8d85beeffd196fee14f931800301" alt="Bicicleta 8">
+                <h3>Scott Addict RC</h3>
+                <p>Preço: R$ 12.500</p>
+                <button onclick="openModal('modal-8')">Mais Informações</button>
+            </div>
+
+            <!-- Bicicleta 9 -->
+            <div class="veiculo">
+                <img src="https://ik.imagekit.io/gobikes/trance-x-advanced-pro-29-3-2022-675b9681d.jpg?tr=w-900,t-true" alt="Bicicleta 9">
+                <h3>Giant Trance X</h3>
+                <p>Preço: R$ 6.300</p>
+                <button onclick="openModal('modal-9')">Mais Informações</button>
+            </div>
+
+            <!-- Bicicleta 10 -->
+            <div class="veiculo">
+                <img src="https://www.trisportmag.com.br/wp-content/uploads/2015/09/11.jpg" alt="Bicicleta 10">
+                <h3>Colnago C60</h3>
+                <p>Preço: R$ 14.000</p>
+                <button onclick="openModal('modal-10')">Mais Informações</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modais de todas as bicicletas -->
+    <div id="modal-1" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal-1')">&times;</span>
+            <h3>Mountain Bike Merida</h3>
+            <p>Descrição detalhada da bicicleta...</p>
+            <p><strong>Características:</strong></p>
+            <ul>
+                <li>Quadro de alumínio</li>
+                <li>Suspensão dianteira</li>
+                <li>Freios a disco</li>
+                <li>Rodas 26"</li>
+            </ul>
+            <p>Preço: R$ 3.499</p>
+        </div>
+    </div>
+
+    <div id="modal-2" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal-2')">&times;</span>
+            <h3>Specialized Rockhopper</h3>
+            <p>Descrição detalhada da bicicleta...</p>
+            <p><strong>Características:</strong></p>
+            <ul>
+                <li>Quadro de alumínio</li>
+                <li>Suspensão dianteira</li>
+                <li>Freios a disco</li>
+                <li>Rodas 29"</li>
+            </ul>
+            <p>Preço: R$ 4.199</p>
+        </div>
+    </div>
+
+    <div id="modal-3" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal-3')">&times;</span>
+            <h3>Trek Marlin 7</h3>
+            <p>Descrição detalhada da bicicleta...</p>
+            <p><strong>Características:</strong></p>
+            <ul>
+                <li>Quadro de alumínio</li>
+                <li>Suspensão dianteira</li>
+                <li>Freios a disco</li>
+                <li>Rodas 29"</li>
+            </ul>
+            <p>Preço: R$ 3.999</p>
+        </div>
+    </div>
+
+    <div id="modal-4" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal-4')">&times;</span>
+            <h3>Caloi Elite Carbon</h3>
+            <p>Descrição detalhada da bicicleta...</p>
+            <p><strong>Características:</strong></p>
+            <ul>
+                <li>Quadro de carbono</li>
+                <li>Suspensão total</li>
+                <li>Freios a disco</li>
+                <li>Rodas 27.5"</li>
+            </ul>
+            <p>Preço: R$ 8.900</p>
+        </div>
+    </div>
+
+    <div id="modal-5" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal-5')">&times;</span>
+            <h3>Canyon Endurace</h3>
+            <p>Descrição detalhada da bicicleta...</p>
+            <p><strong>Características:</strong></p>
+            <ul>
+                <li>Quadro de carbono</li>
+                <li>Freios a disco hidráulicos</li>
+                <li>Rodas 28"</li>
+                <li>Grupo Shimano 105</li>
+            </ul>
+            <p>Preço: R$ 6.500</p>
+        </div>
+    </div>
+
+    <div id="modal-6" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal-6')">&times;</span>
+            <h3>Ouro Preto Speed</h3>
+            <p>Descrição detalhada da bicicleta...</p>
+            <p><strong>Características:</strong></p>
+            <ul>
+                <li>Quadro de alumínio</li>
+                <li>Freios a disco mecânico</li>
+                <li>Rodas 28"</li>
+                <li>Câmbio Shimano</li>
+            </ul>
+            <p>Preço: R$ 2.499</p>
+        </div>
+    </div>
+
+    <div id="modal-7" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal-7')">&times;</span>
+            <h3>Roval CLX</h3>
+            <p>Descrição detalhada da bicicleta...</p>
+            <p><strong>Características:</strong></p>
+            <ul>
+                <li>Quadro de carbono</li>
+                <li>Freios a disco hidráulicos</li>
+                <li>Rodas 28"</li>
+                <li>Câmbio eletrônico</li>
+            </ul>
+            <p>Preço: R$ 5.800</p>
+        </div>
+    </div>
+
+    <div id="modal-8" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal-8')">&times;</span>
+            <h3>Scott Addict RC</h3>
+            <p>Descrição detalhada da bicicleta...</p>
+            <p><strong>Características:</strong></p>
+            <ul>
+                <li>Quadro de carbono</li>
+                <li>Freios a disco hidráulicos</li>
+                <li>Rodas 28"</li>
+                <li>Câmbios eletrônicos</li>
+            </ul>
+            <p>Preço: R$ 12.500</p>
+        </div>
+    </div>
+
+    <div id="modal-9" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal-9')">&times;</span>
+            <h3>Giant Trance X</h3>
+            <p>Descrição detalhada da bicicleta...</p>
+            <p><strong>Características:</strong></p>
+            <ul>
+                <li>Quadro de alumínio</li>
+                <li>Suspensão dianteira e traseira</li>
+                <li>Freios a disco hidráulicos</li>
+                <li>Rodas 29"</li>
+            </ul>
+            <p>Preço: R$ 6.300</p>
+        </div>
+    </div>
+
+    <div id="modal-10" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal-10')">&times;</span>
+            <h3>Colnago C60</h3>
+            <p>Descrição detalhada da bicicleta...</p>
+            <p><strong>Características:</strong></p>
+            <ul>
+                <li>Quadro de carbono</li>
+                <li>Freios a disco hidráulicos</li>
+                <li>Rodas 28"</li>
+                <li>Câmbios Shimano Ultegra</li>
+            </ul>
+            <p>Preço: R$ 14.000</p>
+        </div>
+    </div>
+
+    <!-- Código JavaScript -->
+    <script>
+        // Função para abrir o modal
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = "block";
+        }
+
+        // Função para fechar o modal
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = "none";
+        }
+
+        // Fecha o modal se clicar fora dele
+        window.onclick = function(event) {
+            var modals = document.getElementsByClassName("modal");
+            for (var i = 0; i < modals.length; i++) {
+                if (event.target == modals[i]) {
+                    modals[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+</body>
+</html>

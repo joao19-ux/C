@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carros - Concessionária XYZ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header / Cabeçalho -->
+    <header>
+        <div class="logo">
+            <img src="https://static.vecteezy.com/ti/vetor-gratis/t2/6367949-x-red-black-alphabet-letter-logo-icon-design-with-swoosh-and-star-criative-template-for-business-and-company-vetor.jpg" alt="Logo da Concessionária XYZ">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="home.html">Início</a></li>
+                <li><a href="carros.html">Carros</a></li>
+                <li><a href="motos.html">Motos</a></li>
+                <li><a href="caminhoes.html">Caminhões</a></li>
+                <li><a href="jatos.html">Jatos</a></li>
+                <li><a href="jet-skis.html">Jet Skis</a></li>
+                <li><a href="bicicletas.html">Bicicletas</a></li>
+                <li><a href="financiamento.html">Financiamento</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Seção Carros -->
+    <section id="carros">
+        <h2>Carros</h2>
+        <div class="veiculos">
+            <!-- Carro 1 -->
+            <div class="veiculo">
+                <img src="https://quatrorodas.abril.com.br/wp-content/uploads/2016/11/5658bc3a52657372a11b1a65458-italia-speciale-1.jpeg?quality=70&strip=all" alt="Carro 1">
+                <h3>FERRARI 458 ITALIA</h3>
+                <p>Preço: R$ 2.499.990</p>
+                <button onclick="openModal('modal-1')">Mais Informações</button>
+            </div>
+
+            <!-- Carro 2 -->
+            <div class="veiculo">
+                <img src="https://cdn.awsli.com.br/600x1000/2571/2571273/produto/240006152/7921401-e8r651k1pb.jpg" alt="Carro 2">
+                <h3>LAMBORGHINI </h3>
+                <p>Preço: R$ 4.690.000</p>
+                <button onclick="openModal('modal-2')">Mais Informações</button>
+            </div>
+
+            <!-- Carro 3 -->
+            <div class="veiculo">
+                <img src="https://s2-autoesporte.glbimg.com/rDSFin7Tr7Tl4VNSb6mlMK9hB5U=/0x0:1920x1218/888x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_cf9d035bf26b4646b105bd958f32089d/internal_photos/bs/2024/f/g/4ezlZDQuyeOj4k7Ll3lw/mercedes-amg-gt-63-s-e-performance-dianteira.jpg" alt="Carro 3">
+                <h3>MERCEDES-BENZ AMG GT</h3>
+                <p>Preço: R$ 1.648.000</p>
+                <button onclick="openModal('modal-3')">Mais Informações</button>
+            </div>
+
+            <!-- Carro 4 -->
+            <div class="veiculo">
+                <img src="https://image.webmotors.com.br/_fotos/anunciousados/gigante/2024/202410/20241015/ford-mustang-5.2-v8-supercharger-gasolina-shelby-gt-500-dct-wmimagem09450537742.jpg?s=fill&w=249&h=186&q=70" alt="Carro 4">
+                <h3>FORD MUSTANG</h3>
+                <p>Preço: R$ 1.350.000</p>
+                <button onclick="openModal('modal-4')">Mais Informações</button>
+            </div>
+
+            <!-- Carro 5 -->
+            <div class="veiculo">
+                <img src="https://cdn.motor1.com/images/mgl/JJkj4/s3/nissan-gt-r-t-spec.jpg" alt="Carro 5">
+                <h3>NISSAN GT-R35</h3>
+                <p>Preço: R$ 1.249.900</p>
+                <button onclick="openModal('modal-5')">Mais Informações</button>
+            </div>
+
+            <!-- Carro 6 -->
+            <div class="veiculo">
+                <img src="https://image.webmotors.com.br/_fotos/anunciousados/gigante/2024/202410/20241029/volkswagen-golf-2.0-tsi-gti-16v-turbo-gasolina-4p-automatico-wmimagem11280871778.jpg?s=fill&w=552&h=414&q=60" alt="Carro 6">
+                <h3>VOLKSWAGEN GOLF</h3>
+                <p>Preço: R$ 134.500</p>
+                <button onclick="openModal('modal-6')">Mais Informações</button>
+            </div>
+
+            <!-- Carro 7 -->
+            <div class="veiculo">
+                <img src="https://acdn.mitiendanube.com/stores/002/400/614/products/s7742a19887284fd0be6ce42e825fed47p1-6a87dc74af83b3d7b816757783988252-1024-1024.jpg" alt="Carro 7">
+                <h3>NISSAN GT-R34</h3>
+                <p>Preço: R$ 1.350.000</p>
+                <button onclick="openModal('modal-7')">Mais Informações</button>
+            </div>
+
+            <!-- Carro 8 -->
+            <div class="veiculo">
+                <img src="https://quatrorodas.abril.com.br/wp-content/uploads/2023/10/hennessey-chevrolet-camaro-zl1-exorcist-final-edition.jpg?quality=70&strip=info&crop=1&resize=1080,565" alt="Carro 8">
+                <h3>Camaro</h3>
+                <p>Preço: R$ 350.000</p>
+                <button onclick="openModal('modal-8')">Mais Informações</button>
+            </div>
+
+            <!-- Carro 9 -->
+            <div class="veiculo">
+                <img src="https://reparadorsa.com.br/wp-content/uploads/2023/07/HEADER-3.jpg" alt="Carro 9">
+                <h3>Opala</h3>
+                <p>Preço: R$ 25.003</p>
+                <button onclick="openModal('modal-9')">Mais Informações</button>
+            </div>
+
+            <!-- Carro 10 -->
+            <div class="veiculo">
+                <img src="https://garagetalks.home.blog/wp-content/uploads/2019/05/350z1.png" alt="Carro 10">
+                <h3>Nissan Drift</h3>
+                <p>Preço: R$ 300.000</p>
+                <button onclick="openModal('modal-10')">Mais Informações</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer / Rodapé -->
+    <footer>
+        <p>&copy; 2024 Concessionária XYZ - Todos os direitos reservados</p>
+    </footer>
+
+    <!-- Modais para as informações detalhadas -->
+    <div id="modal-1" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal-1')">&times;</span>
+            <h3>FERRARI 458 ITALIA</h3>
+            <p><strong>Características:</strong></p>
+            <ul>
+                <li>Motor V8 4.3L</li>
+                <li>Potência: 570 cv</li>
+                <li>Transmissão automática de 7 marchas</li>
+                <li>Capacidade de carga: 300 kg</li>
+            </ul>
+            <p>Preço: R$ 2.499.990</p>
+        </div>
+    </div>
+
+    <div id="modal-2" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal-2')">&times;</span>
+            <h3>LAMBORGHINI H</h3>
+            <p><strong>Características:</strong></p>
+            <ul>
+                <li>Motor V10 5.2L</li>
+                <li>Potência: 610 cv</li>
+                <li>Transmissão automática de 6 marchas</li>
+                <li>Capacidade de carga: 150 kg</li>
+            </ul>
+            <p>Preço: R$ 4.690.000</p>
+        </div>
+    </div>
+
+    <div id="modal-3" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal-3')">&times;</span>
+            <h3>MERCEDES-BENZ AMG GT</h3>
+            <p><strong>Características:</strong></p>
+            <ul>
+                <li>Motor V8 4.0L</li>
+                <li>Potência: 510 cv</li>
+                <li>Transmissão automática de 7 marchas</li>
+                <li>Capacidade de carga: 200 kg</li>
+            </ul>
+            <p>Preço: R$ 1.648.000</p>
+        </div>
+    </div>
+
+    <div id="modal-4" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal-4')">&times;</span>
+            <h3>FORD MUSTANG</h3>
+            <p><strong>Características:</strong></p>
+            <ul>
+                <li>Motor V8 5.2L</li>
+                <li>Potência: 760 cv</li>
+                <li>Transmissão manual de 6 marchas</li>
+                <li>Capacidade de carga: 250 kg</li>
+            </ul>
+            <p>Preço: R$ 1.350.000</p>
+        </div>
+    </div>
+
+    <div id="modal-5" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal-5')">&times;</span>
+            <h3>NISSAN GT-R35</h3>
+            <p><strong>Características:</strong></p>
+            <ul>
+                <li>Motor V6 3.8L</li>
+                <li>Potência: 600 cv</li>
+                <li>Transmissão automática de 6 marchas</li>
+                <li>Capacidade de carga: 180 kg</li>
+            </ul>
+            <p>Preço: R$ 1.249.900</p>
+        </div>
+    </div>
+
+    <div id="modal-6" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal-6')">&times;</span>
+            <h3>VOLKSWAGEN GOLF</h3>
+            <p><strong>Características:</strong></p>
+            <ul>
+                <li>Motor 2.0L Turbo</li>
+                <li>Potência: 230 cv</li>
+                <li>Transmissão automática de 6 marchas</li>
+                <li>Capacidade de carga: 400 kg</li>
+            </ul>
+            <p>Preço: R$ 134.500</p>
+        </div>
+    </div>
+
+    <div id="modal-7" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal-7')">&times;</span>
+            <h3>NISSAN GT-R34</h3>
+            <p><strong>Características:</strong></p>
+            <ul>
+                <li>Motor RB26DETT 2.6L</li>
+                <li>Potência: 280 cv</li>
+                <li>Transmissão manual de 5 marchas</li>
+                <li>Capacidade de carga: 200 kg</li>
+            </ul>
+            <p>Preço: R$ 1.350.000</p>
+        </div>
+    </div>
+
+    <div id="modal-8" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal-8')">&times;</span>
+            <h3>Camaro</h3>
+            <p><strong>Características:</strong></p>
+            <ul>
+                <li>Motor V8 6.2L</li>
+                <li>Potência: 650 cv</li>
+                <li>Transmissão automática de 8 marchas</li>
+                <li>Capacidade de carga: 200 kg</li>
+            </ul>
+            <p>Preço: R$ 350.000</p>
+        </div>
+    </div>
+
+    <div id="modal-9" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal-9')">&times;</span>
+            <h3>Opala</h3>
+            <p><strong>Características:</strong></p>
+            <ul>
+                <li>Motor 6 cilindros 4.1L</li>
+                <li>Potência: 150 cv</li>
+                <li>Transmissão manual de 4 marchas</li>
+                <li>Capacidade de carga: 500 kg</li>
+            </ul>
+            <p>Preço: R$ 25.003</p>
+        </div>
+    </div>
+
+    <div id="modal-10" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal-10')">&times;</span>
+            <h3>Nissan Drift</h3>
+            <p><strong>Características:</strong></p>
+            <ul>
+                <li>Motor V6 3.0L Turbo</li>
+                <li>Potência: 400 cv</li>
+                <li>Transmissão manual de 6 marchas</li>
+                <li>Capacidade de carga: 150 kg</li>
+            </ul>
+            <p>Preço: R$ 300.000</p>
+        </div>
+    </div>
+
+    <script>
+        // Função para abrir o modal
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = "block";
+        }
+
+        // Função para fechar o modal
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = "none";
+        }
+
+        // Fechar modais ao clicar fora
+        window.onclick = function(event) {
+            if (event.target.className === "modal") {
+                closeModal(event.target.id);
+            }
+        }
+    </script>
+
+</body>
+</html>

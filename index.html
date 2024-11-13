@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Concessionária XYZ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header / Cabeçalho -->
+    <header>
+        <div class="logo">
+            <img src="https://static.vecteezy.com/ti/vetor-gratis/t2/6367949-x-red-black-alphabet-letter-logo-icon-design-with-swoosh-and-star-criative-template-for-business-and-company-vetor.jpg" alt="Logo da Concessionária XYZ">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Seção de Login -->
+    <section id="login">
+        <div class="login-container">
+            <div class="login-container">
+                <h2>Login</h2>
+                <form action="index.html" method="POST">
+                    <div class="login">
+                        <h3>Faça o Login</h3>
+                        <div class="Email">
+                            <label for="exampleInputEmail1" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
+                        </div>
+                        <div class="Senha">
+                            <label for="exampleInputPassword1" class="form-label">Senha</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1" />
+                        </div>
+                        <button class="Entrar" type="submit">
+                            <a href="home.html">Entrar</a>
+                            </buttontype="menu" class="login-button"></button>
+                    </div>
+                <div class="form-group">
+                    <a href="recuperar-senha.html">Esqueceu a senha?</a>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer / Rodapé -->
+    <footer>
+        <p>&copy; 2024 Concessionária XYZ - Todos os direitos reservados</p>
+    </footer>
+
+    <!-- Script para validação e redirecionamento -->
+    <script>
+        function validateLogin() {
+            // Pega os valores dos campos de e-mail e senha
+            const email = document.getElementById('email').value;
+            const senha = document.getElementById('senha').value;
+
+            // Simulação de autenticação: Aqui você poderia validar com um banco de dados real
+            // Exemplo de validação simples (você pode trocar essa lógica por uma autenticação real):
+            if (email === "" || senha === "") {
+                alert("Por favor, preencha todos os campos.");
+                return false; // Impede o envio do formulário
+            }
+
+            // Validação simples para fins de exemplo (coloque sua lógica de autenticação real aqui)
+            if (email === "usuario@exemplo.com" && senha === "senha123") {
+                alert("Login bem-sucedido!");
+                // Redireciona para a página inicial
+                window.location.href = "index.html"; // Redireciona para a página inicial
+                return false; // Impede o envio do formulário
+            } else {
+                alert("E-mail ou senha inválidos.");
+                return false; // Impede o envio do formulário
+            }
+        }
+    </script>
+
+</body>
+</html>

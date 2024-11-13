@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jatos - Concessionária XYZ</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Estilo básico para os modais */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            padding-top: 100px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header / Cabeçalho -->
+    <header>
+        <div class="logo">
+            <img src="https://static.vecteezy.com/ti/vetor-gratis/t2/6367949-x-red-black-alphabet-letter-logo-icon-design-with-swoosh-and-star-criative-template-for-business-and-company-vetor.jpg" alt="Logo da Concessionária XYZ">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="home.html">Início</a></li>
+                <li><a href="carros.html">Carros</a></li>
+                <li><a href="motos.html">Motos</a></li>
+                <li><a href="caminhoes.html">Caminhões</a></li>
+                <li><a href="jatos.html">Jatos</a></li>
+                <li><a href="jet-skis.html">Jet Skis</a></li>
+                <li><a href="bicicletas.html">Bicicletas</a></li>
+                <li><a href="financiamento.html">Financiamento</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Seção Jatos -->
+    <section id="jatos">
+        <h2>Jatos</h2>
+        <div class="veiculos">
+            <!-- Jato 1 -->
+            <div class="veiculo">
+                <img src="https://images.aircharterservice.com/global/aircraft-guide/private-charter/gulfstream-g650.jpg" alt="Jato 1">
+                <h3>Gulfstream G650</h3>
+                <p>Preço: R$ 550.000.000</p>
+                <button onclick="openModal('modal-1')">Mais Informações</button>
+            </div>
+
+            <!-- Jato 2 -->
+            <div class="veiculo">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-74YjqOoQSli44xWU3H0DXWypAwQsm__H9w&s" alt="Jato 2">
+                <h3>Gulfstream G700</h3>
+                <p>Preço: R$ 650.000.000</p>
+                <button onclick="openModal('modal-2')">Mais Informações</button>
+            </div>
+
+            <!-- Jato 3 -->
+            <div class="veiculo">
+                <img src="https://images.aircharterservice.com/global/aircraft-guide/private-charter/embraer-phenom-100.jpg" alt="Jato 3">
+                <h3>Embraer Phenom 100</h3>
+                <p>Preço: R$ 17.500.000</p>
+                <button onclick="openModal('modal-3')">Mais Informações</button>
+            </div>
+
+            <!-- Jato 4 -->
+            <div class="veiculo">
+                <img src="https://passageirodeprimeira.b-cdn.net/wp-content/uploads/2020/06/747-8.jpg" alt="Jato 4">
+                <h3>Boeing 747-8 BBJ</h3>
+                <p>Preço: R$ 1.500.000.000</p>
+                <button onclick="openModal('modal-4')">Mais Informações</button>
+            </div>
+
+            <!-- Jato 5 -->
+            <div class="veiculo">
+                <img src="https://www.aeroflap.com.br/wp-content/uploads/2023/05/Dassault_Falcon8X_free_use.webp" alt="Jato 5">
+                <h3>Dassault Falcon 8X</h3>
+                <p>Preço: R$ 400.000.000</p>
+                <button onclick="openModal('modal-5')">Mais Informações</button>
+            </div>
+
+            <!-- Jato 6 -->
+            <div class="veiculo">
+                <img src="https://i.ytimg.com/vi/rxE2EBFRqDA/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGEggYShlMA8=&rs=AOn4CLCwBq_Vcch41UMbC5pB_s4tarrQpQ" alt="Jato 6">
+                <h3>Bombardier Global 7500</h3>
+                <p>Preço: R$ 530.000.000</p>
+                <button onclick="openModal('modal-6')">Mais Informações</button>
+            </div>
+
+            <!-- Jato 7 -->
+            <div class="veiculo">
+                <img src="https://www.aeroflap.com.br/wp-content/uploads/2018/05/Legacy_500_Midsize_Corporate_Aircraft.jpg" alt="Jato 7">
+                <h3>Embraer Legacy 500</h3>
+                <p>Preço: R$ 150.000.000</p>
+                <button onclick="openModal('modal-7')">Mais Informações</button>
+            </div>
+
+            <!-- Jato 8 -->
+            <div class="veiculo">
+                <img src="https://myjet.us/wp-content/uploads/2018/10/DSC_1276.jpg" alt="Jato 8">
+                <h3>Learjet 60</h3>
+                <p>Preço: R$ 120.000.000</p>
+                <button onclick="openModal('modal-8')">Mais Informações</button>
+            </div>
+
+            <!-- Jato 9 -->
+            <div class="veiculo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/4/43/Cessna.560xl.citation.excel.arp.jpg" alt="Jato 9">
+                <h3>Cessna Citation Excel</h3>
+                <p>Preço: R$ 80.000.000</p>
+                <button onclick="openModal('modal-9')">Mais Informações</button>
+            </div>
+
+            <!-- Jato 10 -->
+            <div class="veiculo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Aeronautica_Militare_Piaggio_P-180_Avanti.jpg" alt="Jato 10">
+                <h3>Piaggio P.180 Avanti</h3>
+                <p>Preço: R$ 22.000.000</p>
+                <button onclick="openModal('modal-10')">Mais Informações</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer / Rodapé -->
+    <footer>
+        <p>&copy; 2024 Concessionária XYZ - Todos os direitos reservados</p>
+    </footer>
+
+    <!-- Modais para as informações detalhadas -->
+    <div id="modal-1" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal-1')">&times;</span>
+            <h3>Gulfstream G650</h3>
+            <p><strong>Características:</strong></p>
+            <ul>
+                <li>Motor: Rolls-Royce BR725 A1-12</li>
+                <li>Capacidade de Passageiros: 18</li>
+                <li>Velocidade Máxima: Mach 0.925</li>
+                <li>Alcance: 12.964 km</li>
+                <li>Capacidade de Carga: 2.600 kg</li>
+                <li>Dimensões: 30,4 m de comprimento, 28,5 m de envergadura</li>
+                <li>Altura: 7,5 m</li>
+                <li>Preço: R$ 550.000.000</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="modal-2" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal-2')">&times;</span>
+            <h3>Gulfstream G700</h3>
+            <p><strong>Características:</strong></p>
+            <ul>
+                <li>Motor: Rolls-Royce Pearl 700</li>
+                <li>Capacidade de Passageiros: 19</li>
+                <li>Velocidade Máxima: Mach 0.925</li>
+                <li>Alcance: 13.890 km</li>
+                <li>Capacidade de Carga: 3.000 kg</li>
+                <li>Dimensões: 33,48 m de comprimento, 30,4 m de envergadura</li>
+                <li>Altura: 7,43 m</li>
+                <li>Preço: R$ 650.000.000</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="modal-3" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal-3')">&times;</span>
+            <h3>Embraer Phenom 100</h3>
+            <p><strong>Características:</strong></p>
+            <ul>
+                <li>Motor: Pratt & Whitney Canada PW617F1-E</li>
+                <li>Capacidade de Passageiros: 4 a 6</li>
+                <li>Velocidade Máxima: Mach 0.70</li>
+                <li>Alcance: 2.182 km</li>
+                <li>Capacidade de Carga: 600 kg</li>
+                <li>Dimensões: 12,3 m de comprimento, 12,3 m de envergadura</li>
+                <li>Altura: 4,4 m</li>
+                <li>Preço: R$ 17.500.000</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="modal-4" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal-4')">&times;</span>
+            <h3>Boeing 747-8 BBJ</h3>
+            <p><strong>Características:</strong></p>
+            <ul>
+                <li>Motor: GEnx-2B67</li>
+                <li>Capacidade de Passageiros: 50-60</li>
+                <li>Velocidade Máxima: Mach 0.855</li>
+                <li>Alcance: 14.320 km</li>
+                <li>Capacidade de Carga: 140.000 kg</li>
+                <li>Dimensões: 76,3 m de comprimento, 64,4 m de envergadura</li>
+                <li>Altura: 19,4 m</li>
+                <li>Preço: R$ 1.500.000.000</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="modal-5" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal-5')">&times;</span>
+            <h3>Dassault Falcon 8X</h3>
+            <p><strong>Características:</strong></p>
+            <ul>
+                <li>Motor: Pratt & Whitney Canada PW307D</li>
+                <li>Capacidade de Passageiros: 14</li>
+                <li>Velocidade Máxima: Mach 0.90</li>
+                <li>Alcance: 11.945 km</li>
+                <li>Capacidade de Carga: 1.800 kg</li>
+                <li>Dimensões: 24,38 m de comprimento, 26,2 m de envergadura</li>
+                <li>Altura: 7,8 m</li>
+                <li>Preço: R$ 400.000.000</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="modal-6" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal-6')">&times;</span>
+            <h3>Bombardier Global 7500</h3>
+            <p><strong>Características:</strong></p>
+            <ul>
+                <li>Motor: Rolls-Royce Pearl 15</li>
+                <li>Capacidade de Passageiros: 19</li>
+                <li>Velocidade Máxima: Mach 0.925</li>
+                <li>Alcance: 14.260 km</li>
+                <li>Capacidade de Carga: 3.500 kg</li>
+                <li>Dimensões: 30,4 m de comprimento, 28,7 m de envergadura</li>
+                <li>Altura: 7,8 m</li>
+                <li>Preço: R$ 530.000.000</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="modal-7" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal-7')">&times;</span>
+            <h3>Embraer Legacy 500</h3>
+            <p><strong>Características:</strong></p>
+            <ul>
+                <li>Motor: Honeywell HTF7500E</li>
+                <li>Capacidade de Passageiros: 12</li>
+                <li>Velocidade Máxima: Mach 0.83</li>
+                <li>Alcance: 5.778 km</li>
+                <li>Capacidade de Carga: 1.800 kg</li>
+                <li>Dimensões: 20,6 m de comprimento, 21,1 m de envergadura</li>
+                <li>Altura: 6,5 m</li>
+                <li>Preço: R$ 150.000.000</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="modal-8" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal-8')">&times;</span>
+            <h3>Learjet 60</h3>
+            <p><strong>Características:</strong></p>
+            <ul>
+                <li>Motor: Honeywell TFE731-4R-1H</li>
+                <li>Capacidade de Passageiros: 8</li>
+                <li>Velocidade Máxima: Mach 0.81</li>
+                <li>Alcance: 3.120 km</li>
+                <li>Capacidade de Carga: 900 kg</li>
+                <li>Dimensões: 17,07 m de comprimento, 14,56 m de envergadura</li>
+                <li>Altura: 4,9 m</li>
+                <li>Preço: R$ 120.000.000</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="modal-9" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal-9')">&times;</span>
+            <h3>Cessna Citation Excel</h3>
+            <p><strong>Características:</strong></p>
+            <ul>
+                <li>Motor: Pratt & Whitney Canada PW535A</li>
+                <li>Capacidade de Passageiros: 9</li>
+                <li>Velocidade Máxima: Mach 0.84</li>
+                <li>Alcance: 3.705 km</li>
+                <li>Capacidade de Carga: 1.500 kg</li>
+                <li>Dimensões: 17,85 m de comprimento, 17,4 m de envergadura</li>
+                <li>Altura: 5,3 m</li>
+                <li>Preço: R$ 80.000.000</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="modal-10" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal-10')">&times;</span>
+            <h3>Piaggio P.180 Avanti</h3>
+            <p><strong>Características:</strong></p>
+            <ul>
+                <li>Motor: Pratt & Whitney Canada PW615F</li>
+                <li>Capacidade de Passageiros: 7</li>
+                <li>Velocidade Máxima: Mach 0.70</li>
+                <li>Alcance: 1.450 km</li>
+                <li>Capacidade de Carga: 680 kg</li>
+                <li>Dimensões: 14,8 m de comprimento, 13,5 m de envergadura</li>
+                <li>Altura: 4,4 m</li>
+                <li>Preço: R$ 22.000.000</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = "block";
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = "none";
+        }
+    </script>
+</body>
+</html>

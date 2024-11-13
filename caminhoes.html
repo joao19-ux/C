@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caminhões - Concessionária XYZ</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Estilo para o modal */
+        .modal {
+            display: none; /* Inicialmente escondido */
+            position: fixed;
+            z-index: 1; /* Fica acima de outros elementos */
+            left: 0;
+            top: 0;
+            width: 100%; /* Largura cheia */
+            height: 100%; /* Altura cheia */
+            overflow: auto; /* Permite rolagem se necessário */
+            background-color: rgb(0,0,0); /* Fundo preto com opacidade */
+            background-color: rgba(0,0,0,0.4); /* Cor do fundo */
+        }
+
+        /* O conteúdo do modal */
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%; /* Largura do modal */
+            max-width: 600px; /* Largura máxima */
+        }
+
+        /* O botão de fechar (x) */
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        /* Estilo geral dos caminhões */
+        .veiculo {
+            text-align: center;
+            margin: 10px;
+        }
+
+        .veiculo img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #333;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header / Cabeçalho -->
+    <header>
+        <div class="logo">
+            <img src="https://static.vecteezy.com/ti/vetor-gratis/t2/6367949-x-red-black-alphabet-letter-logo-icon-design-with-swoosh-and-star-criative-template-for-business-and-company-vetor.jpg" alt="Logo da Concessionária XYZ">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="home.html">Início</a></li>
+                <li><a href="carros.html">Carros</a></li>
+                <li><a href="motos.html">Motos</a></li>
+                <li><a href="caminhoes.html">Caminhões</a></li>
+                <li><a href="jatos.html">Jatos</a></li>
+                <li><a href="jet-skis.html">Jet Skis</a></li>
+                <li><a href="bicicletas.html">Bicicletas</a></li>
+                <li><a href="financiamento.html">Financiamento</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Seção Caminhões -->
+    <section id="caminhoes">
+        <h2>Caminhões</h2>
+        <div class="veiculos">
+            <!-- Caminhão 1 -->
+            <div class="veiculo">
+                <img src="https://assets.volvo.com/is/image/VolvoInformationTechnologyAB/volvo-fh16-cgi-exterior-1?qlt=82&wid=1024&ts=1705310176284&dpr=off&fit=constrain&fmt=png-alpha" alt="Caminhão 1">
+                <h3>VOLVO FH16 700</h3>
+                <p>Preço: R$ 450.000</p>
+                <button onclick="openModal('modal-1')">Mais Informações</button>
+            </div>
+
+            <!-- Caminhão 2 -->
+            <div class="veiculo">
+                <img src="https://production.autoforce.com/uploads/picture/image/165746885/main_webp_comprar-actros-euro6_39c6971e7d.jpg.webp" alt="Caminhão 2">
+                <h3>MERCEDES-BENZ ACTROS</h3>
+                <p>Preço: R$ 560.000</p>
+                <button onclick="openModal('modal-2')">Mais Informações</button>
+            </div>
+
+            <!-- Caminhão 3 -->
+            <div class="veiculo">
+                <img src="https://www.divelp.com.br/wp-content/uploads/2021/10/Ficha-tecnica-Mercedes-Benz-Axor-2041.jpg" alt="Caminhão 3">
+                <h3>MERCEDEZ-BENZ AXOR</h3>
+                <p>Preço: R$ 420.000</p>
+                <button onclick="openModal('modal-3')">Mais Informações</button>
+            </div>
+
+            <!-- Caminhão 4 -->
+            <div class="veiculo">
+                <img src="https://st.mascus.com/imagetilewm/product/e531ffd8/scania-r500-v8-topline-6x2-m,813a539e-1.jpg" alt="Caminhão 4">
+                <h3>SCANIA R 500</h3>
+                <p>Preço: R$ 480.000</p>
+                <button onclick="openModal('modal-4')">Mais Informações</button>
+            </div>
+
+            <!-- Caminhão 5 -->
+            <div class="veiculo">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTw-4nXdnKpzNY-Nbffko6iGm0htrJbd4V5HA&s" alt="Caminhão 5">
+                <h3>DAF XF</h3>
+                <p>Preço: R$ 490.000</p>
+                <button onclick="openModal('modal-5')">Mais Informações</button>
+            </div>
+
+            <!-- Caminhão 6 -->
+            <div class="veiculo">
+                <img src="https://ocarreteiro.com.br/wp-content/uploads/2018/12/Iveco_Hi_Road_4x2_400_001-1068x731.jpg" alt="Caminhão 6">
+                <h3>IVECO STRALIS</h3>
+                <p>Preço: R$ 460.000</p>
+                <button onclick="openModal('modal-6')">Mais Informações</button>
+            </div>
+
+            <!-- Caminhão 7 -->
+            <div class="veiculo">
+                <img src="https://p.turbosquid.com/ts-thumb/DP/gn0seM/FN/ava/jpg/1679239545/600x600/fit_q87/f227a1750e8b207092d47089827c72c8486ad72c/ava.jpg" alt="Caminhão 7">
+                <h3>FREIGHTLINER CLASSIC XL</h3>
+                <p>Preço: R$ 380.000</p>
+                <button onclick="openModal('modal-7')">Mais Informações</button>
+            </div>
+
+            <!-- Caminhão 8 -->
+            <div class="veiculo">
+                <img src="https://d1zoyygth0y3um.cloudfront.net/efs/wp/domains/www.truckcountry.com/wp-content/uploads/2022/03/1-2.jpg" alt="Caminhão 8">
+                <h3>MAACK GRANITE</h3>
+                <p>Preço: R$ 510.000</p>
+                <button onclick="openModal('modal-8')">Mais Informações</button>
+            </div>
+
+            <!-- Caminhão 9 -->
+            <div class="veiculo">
+                <img src="https://i.ytimg.com/vi/5XyrDk6UsNg/maxresdefault.jpg" alt="Caminhão 9">
+                <h3>MAN TGX 18.440</h3>
+                <p>Preço: R$ 540.000</p>
+                <button onclick="openModal('modal-9')">Mais Informações</button>
+            </div>
+
+            <!-- Caminhão 10 -->
+            <div class="veiculo">
+                <img src="https://autoglass.vteximg.com.br/arquivos/ids/227481-1000-1000/Vidro-Porta-Serie-6-2019-a-2021-Direito-Passageiro-Caminhao-Verde-Saint-Gobain---1673239.jpg?v=637828906508970000" alt="Caminhão 10">
+                <h3>SCANIA S SERIES</h3>
+                <p>Preço: R$ 520.000</p>
+                <button onclick="openModal('modal-10')">Mais Informações</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modais para as informações detalhadas -->
+    <div id="modal-1" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal-1')">&times;</span>
+            <h3>VOLVO FH16 700</h3>
+            <p>Descrição detalhada do caminhão...</p>
+            <p><strong>Características:</strong></p>
+            <ul>
+                <li>Potência: 700 cv</li>
+                <li>Motorização: Diesel</li>
+                <li>Transmissão automática</li>
+                <li>Freios a disco</li>
+                <li><strong>Capacidade de carga: 40.000 kg</strong></li>
+            </ul>
+            <p>Preço: R$ 450.000</p>
+        </div>
+    </div>
+
+    <div id="modal-2" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal-2')">&times;</span>
+            <h3>MERCEDES-BENZ ACTROS</h3>
+            <p>Descrição detalhada do caminhão...</p>
+            <p><strong>Características:</strong></p>
+            <ul>
+                <li>Potência: 600 cv</li>
+                <li>Motorização: Diesel</li>
+                <li>Transmissão automática de 12 marchas</li>
+                <li>Suspensão pneumática</li>
+                <li><strong>Capacidade de carga: 38.000 kg</strong></li>
+            </ul>
+            <p>Preço: R$ 560.000</p>
+        </div>
+    </div>
+
+    <div id="modal-3" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal-3')">&times;</span>
+            <h3>MERCEDEZ-BENZ AXOR</h3>
+            <p>Descrição detalhada do caminhão...</p>
+            <p><strong>Características:</strong></p>
+            <ul>
+                <li>Potência: 460 cv</li>
+                <li>Motorização: Diesel</li>
+                <li>Transmissão manual de 8 marchas</li>
+                <li><strong>Capacidade de carga: 33.000 kg</strong></li>
+            </ul>
+            <p>Preço: R$ 420.000</p>
+        </div>
+    </div>
+
+    <!-- Modais para os outros caminhões -->
+    <div id="modal-4" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal-4')">&times;</span>
+            <h3>SCANIA R 500</h3>
+            <p>Descrição detalhada do caminhão...</p>
+            <p><strong>Características:</strong></p>
+            <ul>
+                <li>Potência: 500 cv</li>
+                <li>Motorização: Diesel</li>
+                <li>Transmissão automática</li>
+                <li><strong>Capacidade de carga: 36.000 kg</strong></li>
+            </ul>
+            <p>Preço: R$ 480.000</p>
+        </div>
+    </div>
+
+    <div id="modal-5" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal-5')">&times;</span>
+            <h3>DAF XF</h3>
+            <p>Descrição detalhada do caminhão...</p>
+            <p><strong>Características:</strong></p>
+            <ul>
+                <li>Potência: 530 cv</li>
+                <li>Motorização: Diesel</li>
+                <li>Transmissão de 12 marchas</li>
+                <li><strong>Capacidade de carga: 35.000 kg</strong></li>
+            </ul>
+            <p>Preço: R$ 490.000</p>
+        </div>
+    </div>
+
+    <div id="modal-6" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal-6')">&times;</span>
+            <h3>IVECO STRALIS</h3>
+            <p>Descrição detalhada do caminhão...</p>
+            <p><strong>Características:</strong></p>
+            <ul>
+                <li>Potência: 450 cv</li>
+                <li>Motorização: Diesel</li>
+                <li>Transmissão manual de 8 marchas</li>
+                <li><strong>Capacidade de carga: 34.000 kg</strong></li>
+            </ul>
+            <p>Preço: R$ 460.000</p>
+        </div>
+    </div>
+
+    <div id="modal-7" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal-7')">&times;</span>
+            <h3>FREIGHTLINER CLASSIC XL</h3>
+            <p>Descrição detalhada do caminhão...</p>
+            <p><strong>Características:</strong></p>
+            <ul>
+                <li>Potência: 550 cv</li>
+                <li>Motorização: Diesel</li>
+                <li>Transmissão automática de 10 marchas</li>
+                <li><strong>Capacidade de carga: 37.000 kg</strong></li>
+            </ul>
+            <p>Preço: R$ 380.000</p>
+        </div>
+    </div>
+
+    <div id="modal-8" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal-8')">&times;</span>
+            <h3>MAACK GRANITE</h3>
+            <p>Descrição detalhada do caminhão...</p>
+            <p><strong>Características:</strong></p>
+            <ul>
+                <li>Potência: 490 cv</li>
+                <li>Motorização: Diesel</li>
+                <li>Transmissão automática</li>
+                <li><strong>Capacidade de carga: 39.000 kg</strong></li>
+            </ul>
+            <p>Preço: R$ 510.000</p>
+        </div>
+    </div>
+
+    <div id="modal-9" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal-9')">&times;</span>
+            <h3>MAN TGX 18.440</h3>
+            <p>Descrição detalhada do caminhão...</p>
+            <p><strong>Características:</strong></p>
+            <ul>
+                <li>Potência: 440 cv</li>
+                <li>Motorização: Diesel</li>
+                <li>Transmissão de 12 marchas</li>
+                <li><strong>Capacidade de carga: 36.000 kg</strong></li>
+            </ul>
+            <p>Preço: R$ 540.000</p>
+        </div>
+    </div>
+
+    <div id="modal-10" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal-10')">&times;</span>
+            <h3>SCANIA S SERIES</h3>
+            <p>Descrição detalhada do caminhão...</p>
+            <p><strong>Características:</strong></p>
+            <ul>
+                <li>Potência: 600 cv</li>
+                <li>Motorização: Diesel</li>
+                <li>Transmissão automática de 12 marchas</li>
+                <li><strong>Capacidade de carga: 38.000 kg</strong></li>
+            </ul>
+            <p>Preço: R$ 520.000</p>
+        </div>
+    </div>
+
+    <script>
+        // Função para abrir o modal
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = "block";
+        }
+
+        // Função para fechar o modal
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = "none";
+        }
+
+        // Fecha o modal se clicar fora dele
+        window.onclick = function(event) {
+            var modals = document.getElementsByClassName("modal");
+            for (var i = 0; i < modals.length; i++) {
+                if (event.target == modals[i]) {
+                    modals[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+
+</body>
+</html>

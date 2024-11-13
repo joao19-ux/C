@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recuperar Senha - Concessionária XYZ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header / Cabeçalho -->
+    <header>
+        <div class="logo">
+            <img src="https://static.vecteezy.com/ti/vetor-gratis/t2/6367949-x-red-black-alphabet-letter-logo-icon-design-with-swoosh-and-star-criative-template-for-business-and-company-vetor.jpg" alt="Logo da Concessionária XYZ">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="home.html">Início</a></li>
+                <li><a href="carros.html">Carros</a></li>
+                <li><a href="motos.html">Motos</a></li>
+                <li><a href="caminhoes.html">Caminhões</a></li>
+                <li><a href="jatos.html">Jatos</a></li>
+                <li><a href="jet-skis.html">Jet Skis</a></li>
+                <li><a href="bicicletas.html">Bicicletas</a></li>
+                <li><a href="financiamento.html">Financiamento</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Seção de Recuperação de Senha -->
+    <section id="recuperar-senha">
+        <div class="recuperar-senha-container">
+            <h2>Recuperar Senha</h2>
+            <p>Digite seu e-mail abaixo para receber um link para redefinir sua senha.</p>
+            
+            <form id="recuperarSenhaForm" method="POST" onsubmit="return validateEmail()">
+                <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
+                </div>
+                <div class="form-group">
+                    <button type="submit">Recuperar Senha</button>
+                </div>
+            </form>
+            
+            <p><a href="login.html">Voltar para o login</a></p>
+        </div>
+    </section>
+
+    <!-- Footer / Rodapé -->
+    <footer>
+        <p>&copy; 2024 Concessionária XYZ - Todos os direitos reservados</p>
+    </footer>
+
+    <!-- Script para validação de e-mail -->
+    <script>
+        function validateEmail() {
+            const email = document.getElementById('email').value;
+            // Validação simples de e-mail
+            const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!regex.test(email)) {
+                alert("Por favor, insira um e-mail válido.");
+                return false;
+            }
+            
+            alert("Instruções para recuperar sua senha foram enviadas para seu e-mail.");
+            // Aqui você pode integrar com o backend para enviar o e-mail
+            window.location.href = "login.html";  // Redireciona de volta para a página de login
+            return false;
+        }
+    </script>
+
+</body>
+</html>
+recuperar-senha.html
+Exibindo recuperar-senha.html…

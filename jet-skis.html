@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jet Skis - Concessionária XYZ</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Estilo básico para o modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0,0,0);
+            background-color: rgba(0,0,0,0.4);
+            padding-top: 60px;
+        }
+
+        /* Conteúdo do modal */
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+        }
+
+        /* Botão de fechar */
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header / Cabeçalho -->
+    <header>
+        <div class="logo">
+            <img src="https://static.vecteezy.com/ti/vetor-gratis/t2/6367949-x-red-black-alphabet-letter-logo-icon-design-with-swoosh-and-star-criative-template-for-business-and-company-vetor.jpg" alt="Logo da Concessionária XYZ">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="home.html">Início</a></li>
+                <li><a href="carros.html">Carros</a></li>
+                <li><a href="motos.html">Motos</a></li>
+                <li><a href="caminhoes.html">Caminhões</a></li>
+                <li><a href="jatos.html">Jatos</a></li>
+                <li><a href="jet-skis.html">Jet Skis</a></li>
+                <li><a href="bicicletas.html">Bicicletas</a></li>
+                <li><a href="financiamento.html">Financiamento</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Seção Jet Skis -->
+    <section id="jet-skis">
+        <h2>Jet Skis</h2>
+        <div class="veiculos">
+            <!-- Jet Ski 1 -->
+            <div class="veiculo">
+                <img src="https://www.brp-world.com/content/dam/global/en/sea-doo/my24/studio/performance/gtr/SEA-MY24-GTR-STD-230-Eclipse-Black-00036RA00-34FR-NA.png" alt="Jet Ski 1">
+                <h3>Sea-Doo GTR 230</h3>
+                <p>Preço: R$ 65.000</p>
+                <button onclick="openModal('modal-1')">Mais Informações</button>
+            </div>
+
+            <!-- Jet Ski 2 -->
+            <div class="veiculo">
+                <img src="https://jetskihireibiza.com/wp-content/uploads/2023/10/2024-Yamaha-FXSVHOCR-EU-Black_Solid__Limited_Edition-Studio-001-03.jpg" alt="Jet Ski 2">
+                <h3>Yamaha Waverunner FX CR</h3>
+                <p>Preço: R$ 80.000</p>
+                <button onclick="openModal('modal-2')">Mais Informações</button>
+            </div>
+
+            <!-- Jet Ski 3 -->
+            <div class="veiculo">
+                <img src="https://content2.kawasaki.com/ContentStorage/CKM/Products/5411/28e51703-8c81-4010-9dbc-af5c842c480b.png?w=767" alt="Jet Ski 3">
+                <h3>Kawasaki Jet Ski Ultra 310X</h3>
+                <p>Preço: R$ 95.000</p>
+                <button onclick="openModal('modal-3')">Mais Informações</button>
+            </div>
+
+            <!-- Jet Ski 4 -->
+            <div class="veiculo">
+                <img src="https://sportjet.net/~sportjet/painel/principal/fotos/produto_1464962156_spark.png" alt="Jet Ski 4">
+                <h3>Sea-Doo Spark 2-up</h3>
+                <p>Preço: R$ 45.000</p>
+                <button onclick="openModal('modal-4')">Mais Informações</button>
+            </div>
+
+            <!-- Jet Ski 5 -->
+            <div class="veiculo">
+                <img src="https://waverunner.com.au/wp-content/uploads/2020/01/Yamaha-Waverunner-EXR-2020-Large.jpg" alt="Jet Ski 5">
+                <h3>Yamaha Waverunner EXR</h3>
+                <p>Preço: R$ 55.000</p>
+                <button onclick="openModal('modal-5')">Mais Informações</button>
+            </div>
+
+            <!-- Jet Ski 6 -->
+            <div class="veiculo">
+                <img src="https://waverunner.com.au/wp-content/uploads/2020/01/FX-Limited-SVHO-Angled-Profile-ETCHED.jpg" alt="Jet Ski 6">
+                <h3>Yamaha FX SVHO</h3>
+                <p>Preço: R$ 120.000</p>
+                <button onclick="openModal('modal-6')">Mais Informações</button>
+            </div>
+
+            <!-- Jet Ski 7 -->
+            <div class="veiculo">
+                <img src="https://www.yamaha-nautica.com.br/ccstore/v1/images/?source=/file/v2728541698634205540/products/2002.F4N300050CNW9.condicao.desktop.jpg" alt="Jet Ski 7">
+                <h3>Yamaha Waverunner VX CR</h3>
+                <p>Preço: R$ 50.000</p>
+                <button onclick="openModal('modal-7')">Mais Informações</button>
+            </div>
+
+            <!-- Jet Ski 8 -->
+            <div class="veiculo">
+                <img src="https://storage.kawasaki.eu/public/kawasaki.eu/en-EU/model/2020_STX%20160X_BK1_STU%20(1).002.png" alt="Jet Ski 8">
+                <h3>Kawasaki Jet Ski STX 160</h3>
+                <p>Preço: R$ 60.000</p>
+                <button onclick="openModal('modal-8')">Mais Informações</button>
+            </div>
+
+            <!-- Jet Ski 9 -->
+            <div class="veiculo">
+                <img src="https://www.boatshopping.com.br/wp-content/uploads/2019/08/EX-Deluxe-yamaha-boat-shopping.jpg" alt="Jet Ski 9">
+                <h3>Yamaha EX Deluxe</h3>
+                <p>Preço: R$ 70.000</p>
+                <button onclick="openModal('modal-9')">Mais Informações</button>
+            </div>
+
+            <!-- Jet Ski 10 -->
+            <div class="veiculo">
+                <img src="https://www.brp-world.com/content/dam/global/en/sea-doo/my24/studio/performance/rxp-x/SEA-MY24-RXP-X-325-Fiery-Red-00021RC00-34FR-NA.png" alt="Jet Ski 10">
+                <h3>Sea-Doo RXP-X 300</h3>
+                <p>Preço: R$ 100.000</p>
+                <button onclick="openModal('modal-10')">Mais Informações</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer / Rodapé -->
+    <footer>
+        <p>&copy; 2024 Concessionária XYZ - Todos os direitos reservados</p>
+    </footer>
+
+    <!-- Modais -->
+    <div id="modal-1" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal-1')">&times;</span>
+            <h3>Sea-Doo GTR 230</h3>
+            <ul>
+                <li>Motor: 230hp</li>
+                <li>Capacidade: 3 pessoas</li>
+                <li>Preço: R$ 65.000</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="modal-2" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal-2')">&times;</span>
+            <h3>Yamaha Waverunner FX CR</h3>
+            <ul>
+                <li>Motor: 250hp</li>
+                <li>Capacidade: 3 pessoas</li>
+                <li>Preço: R$ 80.000</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="modal-3" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal-3')">&times;</span>
+            <h3>Kawasaki Jet Ski Ultra 310X</h3>
+            <ul>
+                <li>Motor: 310hp</li>
+                <li>Capacidade: 3 pessoas</li>
+                <li>Preço: R$ 95.000</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="modal-4" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal-4')">&times;</span>
+            <h3>Sea-Doo Spark 2-up</h3>
+            <ul>
+                <li>Motor: 90hp</li>
+                <li>Capacidade: 2 pessoas</li>
+                <li>Preço: R$ 45.000</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="modal-5" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal-5')">&times;</span>
+            <h3>Yamaha Waverunner EXR</h3>
+            <ul>
+                <li>Motor: 100hp</li>
+                <li>Capacidade: 3 pessoas</li>
+                <li>Preço: R$ 55.000</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="modal-6" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal-6')">&times;</span>
+            <h3>Yamaha FX SVHO</h3>
+            <ul>
+                <li>Motor: 300hp</li>
+                <li>Capacidade: 3 pessoas</li>
+                <li>Preço: R$ 120.000</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="modal-7" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal-7')">&times;</span>
+            <h3>Yamaha Waverunner VX CR</h3>
+            <ul>
+                <li>Motor: 125hp</li>
+                <li>Capacidade: 3 pessoas</li>
+                <li>Preço: R$ 50.000</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="modal-8" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal-8')">&times;</span>
+            <h3>Kawasaki Jet Ski STX 160</h3>
+            <ul>
+                <li>Motor: 160hp</li>
+                <li>Capacidade: 3 pessoas</li>
+                <li>Preço: R$ 60.000</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="modal-9" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal-9')">&times;</span>
+            <h3>Yamaha EX Deluxe</h3>
+            <ul>
+                <li>Motor: 100hp</li>
+                <li>Capacidade: 3 pessoas</li>
+                <li>Preço: R$ 70.000</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="modal-10" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal-10')">&times;</span>
+            <h3>Sea-Doo RXP-X 300</h3>
+            <ul>
+                <li>Motor: 300hp</li>
+                <li>Capacidade: 2 pessoas</li>
+                <li>Preço: R$ 100.000</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        // Função para abrir o modal
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = "block";
+        }
+
+        // Função para fechar o modal
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = "none";
+        }
+    </script>
+
+</body>
+</html>
